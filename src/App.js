@@ -27,7 +27,7 @@ function App() {
   }, []);
 
   const CLIENT_ID = process.env.REACT_APP_API_KEY;
-  const REDIRECT_URI = "http://localhost:3000";
+  const REDIRECT_URI = "https://smoom-spotify.herokuapp.com/";
   const AUTH_ENDPOINT = "https://accounts.spotify.com/authorize";
   const RESPONSE_TYPE = "token";
 
