@@ -31,7 +31,7 @@ const Login = ({handlePageChange}) => {
       }
     }
   }
- 
+
   return (
     <section className="diagonal-bar d-flex justify-content-around align-items-center p-5 vh-100">
       <form className=" card-border card p-5 d-flex" id="logInForm" onSubmit ={handleSubmit}>
