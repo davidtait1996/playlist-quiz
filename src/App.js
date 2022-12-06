@@ -38,7 +38,7 @@ function App() {
 
   const searchArtists = async (e) => {
     e.preventDefault()
-    const {data} = await axios.get("https://api.spotify.com/v1/me", {
+    const {data: currentUserData} = await axios.get("https://api.spotify.com/v1/me", {
         headers: {
             Authorization: `Bearer ${token}`
         },
@@ -47,8 +47,19 @@ function App() {
             type: "artist"
         }
     })
-    console.log(data)
-    // setArtists(data.artists.items)
+    console.log(currentUserData)
+    const {data: currentUserPlaylists} = await axios.get(`https://api.spotify.com/v1/users/${currentUserData}/playlists`, {
+      headers: {
+          Authorization: `Bearer ${token}`
+      },
+      params: {
+          q: searchKey,
+          type: "artist"
+      }
+  })
+
+  console.log(currentUserPlaylists)
+
   }
 
   const renderArtists = () => {

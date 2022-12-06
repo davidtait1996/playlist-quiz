@@ -17,15 +17,15 @@ const Container = () => {
 
 
   const renderPage = () => {
-    if(currentPage === 'Login') {
-      return <Login handlePageChange={handlePageChange}/>;
-    }
-    else if(currentPage === 'Home') {
-      // if(!userState.loggedIn) {
-      //   return <Login handlePageChange={handlePageChange}/>;
-      // }
+    // if(currentPage === 'Login') {
+    //   return <Login handlePageChange={handlePageChange}/>;
+    // }
+    // else if(currentPage === 'Home') {
+    //   // if(!userState.loggedIn) {
+    //   //   return <Login handlePageChange={handlePageChange}/>;
+    //   // }
       return <Home />;
-    }
+    // }
   }
 
   const handlePageChange = (page) => setCurrentPage(page);
